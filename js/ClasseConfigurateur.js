@@ -97,27 +97,13 @@ class Tablier {
   }
 
   setChoixTexte() {
-    // Ajout des options de couleur du texte
-    this.couleurText.forEach((option) => {
-      const BoutonCouleurText = document.createElement("div");
-      BoutonCouleurText.id = `texte${option.couleur}`;
-      BoutonCouleurText.classList.add("ColorRound", "texte");
-      BoutonCouleurText.style.backgroundColor = option.code;
-      if (option.couleur === this.selectedTextColor) {
-        BoutonCouleurText.classList.add("selectedColor");
-      }
-
-      // Gestion du clic sur la couleur du texte
-      BoutonCouleurText.addEventListener("click", () => {
-        document.querySelectorAll(".texte").forEach((button) => {
-          button.classList.remove("selectedColor");
-        });
-        BoutonCouleurText.classList.add("selectedColor");
-        this.mettreAJourSelection(option, "texte");
-      });
-
-      this.containerTexte.appendChild(BoutonCouleurText);
-    });
+    this.creerOptions(
+        this.couleurText,
+        this.containerTexte,
+        this.selectedTextColor,
+        "texte"
+      );
+  
 
     // Gestion de l'input du texte personnalisé
     this.textTablier.addEventListener("input", () => {
