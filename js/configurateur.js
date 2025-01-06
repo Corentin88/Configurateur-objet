@@ -62,9 +62,26 @@ let textOption = true;
 const prixLettre = 1.8;
 let custom = document.getElementById("customText");
 
-const choixTablier = new Tablier(optionsTissu,optionsPoche,couleurText)
-console.log(choixTablier);
+const containerTissu = document.getElementById("tissu");
+const containerPoche = document.getElementById("optionPoche");
+const containerTexte = document.getElementById("textColorOptions");
+let prixTissu = 0;
+let prixPoche = 0;
+let prixTexte = 0;
+let texteTissu = document.getElementById("displayTissu");
+let textePoche = document.getElementById("displayPoche");
+let imageTissu = document.getElementById("optionTissuImage");
+let imagePoche = document.getElementById("optionPocheImage");
+const textTablier = document.getElementById("customText");
+const TextePerso = document.querySelector(".textePerso");
 
+const choixTablier = new Tablier(optionsTissu,optionsPoche,couleurText)
+choixTablier.setChoixTissu()
+choixTablier.setChoixPoche()
+choixTablier.setcouleurText()
+tablier = choixTablier.getChoixTissu()
+console.log(tablier);
+Tablier.updateTotalPrice()
 
 
 
@@ -79,19 +96,6 @@ console.log(choixTablier);
 
 // window.addEventListener("load", () => {});
 
-// const containerTissu = document.getElementById("tissu");
-// const containerPoche = document.getElementById("optionPoche");
-// const containerTexte = document.getElementById("textColorOptions");
-// const totalPrice = document.querySelector(".price");
-// let prixTissu = 0;
-// let prixPoche = 0;
-// let prixTexte = 0;
-// let texteTissu = document.getElementById("displayTissu");
-// let textePoche = document.getElementById("displayPoche");
-// let imageTissu = document.getElementById("optionTissuImage");
-// let imagePoche = document.getElementById("optionPocheImage");
-// const textTablier = document.getElementById("customText");
-// const TextePerso = document.querySelector(".textePerso");
 
 // optionsTissu.forEach((option) => {
 //   const BoutonCouleur = document.createElement("div");
