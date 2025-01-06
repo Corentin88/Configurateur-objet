@@ -6,7 +6,9 @@ class Tablier {
     this.totalPrice = document.querySelector(".price");
 
   }
-
+creationOption(){
+    
+}
   static updateTotalPrice() {
     const total = prixTissu + prixPoche + prixTexte;
     this.totalPrice.textContent = total.toFixed(2) + "€";
