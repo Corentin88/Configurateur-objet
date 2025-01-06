@@ -54,37 +54,30 @@ const couleurText = [
   { couleur: "Jaune", code: "#e2d047" },
   { couleur: "Orange", code: "#f1722f" },
 ];
-let selectedTissu = "Violet";
-let selectedPoche = "Rouge";
-let customText = "";
-let selectedTextColor = "Noir";
-let textOption = true;
-const prixLettre = 1.8;
-let custom = document.getElementById("customText");
+// let selectedTissu = "Violet";
+// let selectedPoche = "Rouge";
+// let customText = "";
+// let selectedTextColor = "Noir";
+// let textOption = true;
+// const prixLettre = 1.8;
+// let custom = document.getElementById("customText");
 
-const containerTissu = document.getElementById("tissu");
-const containerPoche = document.getElementById("optionPoche");
-const containerTexte = document.getElementById("textColorOptions");
-let prixTissu = 0;
-let prixPoche = 0;
-let prixTexte = 0;
-let texteTissu = document.getElementById("displayTissu");
-let textePoche = document.getElementById("displayPoche");
-let imageTissu = document.getElementById("optionTissuImage");
-let imagePoche = document.getElementById("optionPocheImage");
-const textTablier = document.getElementById("customText");
-const TextePerso = document.querySelector(".textePerso");
+// const containerTissu = document.getElementById("tissu");
+// const containerPoche = document.getElementById("optionPoche");
+// const containerTexte = document.getElementById("textColorOptions");
+// let prixTissu = 0;
+// let prixPoche = 0;
+// let prixTexte = 0;
+// let texteTissu = document.getElementById("displayTissu");
+// let textePoche = document.getElementById("displayPoche");
+// let imageTissu = document.getElementById("optionTissuImage");
+// let imagePoche = document.getElementById("optionPocheImage");
+// const textTablier = document.getElementById("customText");
+// const TextePerso = document.querySelector(".textePerso");
 
 const choixTablier = new Tablier(optionsTissu,optionsPoche,couleurText)
-let tablier =choixTablier.setChoixTissu()
-console.log(tablier);
-
-choixTablier.setChoixPoche()
-choixTablier.setcouleurText()
-let choix = choixTablier.getChoixTissu()
-console.log(choix);
-
-choixTablier.getChoixPoche()
+choixTablier.setChoixTissu();
+choixTablier.setChoixPoche();
 
 
 
