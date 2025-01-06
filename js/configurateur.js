@@ -54,6 +54,18 @@ const couleurText = [
   { couleur: "Jaune", code: "#e2d047" },
   { couleur: "Orange", code: "#f1722f" },
 ];
+
+const choixTablier = new Tablier(optionsTissu,optionsPoche,couleurText)
+choixTablier.setChoixTissu();
+choixTablier.setChoixPoche();
+choixTablier.setChoixTexte();
+choixTablier.setTextOptionVisibility()
+
+
+
+
+
+
 // let selectedTissu = "Violet";
 // let selectedPoche = "Rouge";
 // let customText = "";
@@ -74,20 +86,6 @@ const couleurText = [
 // let imagePoche = document.getElementById("optionPocheImage");
 // const textTablier = document.getElementById("customText");
 // const TextePerso = document.querySelector(".textePerso");
-
-const choixTablier = new Tablier(optionsTissu,optionsPoche,couleurText)
-choixTablier.setChoixTissu();
-choixTablier.setChoixPoche();
-
-
-
-
-
-
-
-
-
-
 
 
 // window.addEventListener("load", () => {});
