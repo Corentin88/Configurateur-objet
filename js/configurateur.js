@@ -76,12 +76,15 @@ const textTablier = document.getElementById("customText");
 const TextePerso = document.querySelector(".textePerso");
 
 const choixTablier = new Tablier(optionsTissu,optionsPoche,couleurText)
-choixTablier.setChoixTissu()
+let tablier =choixTablier.setChoixTissu()
+console.log(tablier);
+
 choixTablier.setChoixPoche()
 choixTablier.setcouleurText()
-tablier = choixTablier.getChoixTissu()
-console.log(tablier);
-Tablier.updateTotalPrice()
+let choix = choixTablier.getChoixTissu()
+console.log(choix);
+
+choixTablier.getChoixPoche()
 
 
 
